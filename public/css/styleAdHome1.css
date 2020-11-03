@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    height: 55px;
+    background-color: #45C203;
+    padding: 0 10px 0 0;
+    justify-content: space-between;
+}
+
+/*-------------------------NavBar-------------------------*/
+
+.header .navBar {
+    
+    color: #1C1F22;
+}
+
+.header .logo {
+    width: 20%;
+    height: 100%;
+    background-color: #1C1F22;
+    color: #EDF5E0;
+}
+
+.header .logo h1 {
+    margin-left: 10px;
+    display: inline;
+    color: white;
+}
+
+.header .logo a{
+    color: white;
+    text-decoration: none;
+}
+
+.header .logo h1 span {
+    color: #45C203;
+}
+
+.header .navBar ul {
+    list-style: none;
+}
+
+.header .navBar ul li {
+    display: inline-block;
+    padding: 12.5px 15px;
+    font-size: 20px;
+}
+
+.header .navBar ul li::after {
+    content: "\25BC";
+    margin-left: 5px;
+    font-size: 8px;
+}
+
+.header .navBar ul li i {
+    cursor: pointer;
+}
+
+.main .menu{
+    margin-right: -50px;
+}
+
+.main .menuLeft {
+    width: 84.5%;
+    height: calc(100vh - 55px);
+    background-color: #1C1F22;
+    color: white;
+    border-top: 1.5px solid white;
+}
+
+.main .menuLeft ul {
+    padding: 0;
+    list-style: none;
+}
+
+.main .menuLeft ul li {
+    padding: 15px 20px;
+}
+
+.main  .menuLeft ul li:hover {
+    background-color: black;
+}
+
+.main .menuLeft ul li:hover>.hoverC {
+    color: white;
+    text-decoration: none;
+}
+
+.main .menuLeft ul li:hover>.hoverC::after {
+    display: block;
+}
+
+.main .hoverC {
+    color: #37A000;
+    text-decoration: none;
+}
+
+.main .hoverC::after {
+    content: "\203A";
+    float: right;
+    font-size: 40px;
+    margin-top: -24px;
+    display: none;
+}
+
+.main .content{
+    padding: 10px;
+    height: calc(100vh - 55px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-left: 10px;
+}
+
+.main .menuLeft .activeAc {
+    color: white;
+}
+
+.main .menuLeft .activeAc::after {
+    content: "\203A";
+    float: right;
+    font-size: 40px;
+    margin-top: -24px;
+    display: block;
+}
+
+.main .menuLeft .active {
+    background-color: black;
+}
+
+
+
+
+
+
+

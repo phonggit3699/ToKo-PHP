@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 20px;
+}
+
+.styleInput {
+    outline: none;
+    border-radius: 5px;
+    width: 400px;
+    padding: 8px 10px;
+    border: 1px solid #babfbb;
+}

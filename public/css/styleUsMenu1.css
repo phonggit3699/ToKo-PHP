@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none !important; 
+}
+.menu-slideshow{
+    display: flex;
+    justify-content: center;
+}
+.menu{
+    width: 250px;
+    height: 600px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2);
+    background-color: #FFFFFF;
+}
+.sub-menu{
+    position: relative;
+    margin-bottom: 15px;
+}
+.menu-list-product.menu-list-product--style h2{
+    font-size: 13px;
+    color: #3a4752;
+    font-weight: normal;
+}
+.menu-list-product.menu-list-product--style span{
+    font-size: 12px;
+    color: #888;
+}
+.menu-item{
+    padding: 10px 15px 0 15px ;
+}
+.menu-list-header{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #3a4752;
+}
+.menu-link{
+    display: flex;
+    justify-content: space-between;
+}
+.menu-list>li:hover>a>h2{
+    color: #1BA085;
+}
+.menu-list>li:hover>a>span{
+    color: #1BA085;
+}
+.menu-hide-list{
+    width: 250px;
+    position: absolute;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2);
+    top: -10px;
+    left: 107%;
+    display: none;
+    z-index: 2;
+    background-color: white;
+}
+.sub-menu::after{
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 15px;
+    right: -30px;
+    top: 0px;
+}
+.sub-menu:hover .menu-hide-list{
+    display: block;
+}
+.menu-hide-list ul{
+    padding: 17px 15px 10px 15px;
+}
+.sub-menu-title{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 8px;
+}
+.menu-hide-list .sub-menu-title h2{
+    font-size: 16px;
+}
+.menu-hide-list .sub-menu-title span{
+    font-size: 16px;
+}
+.list-type-book{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.menu-hide-list>ul>li:last-child{
+    margin-bottom: none ;
+}
+.menu-hide-list>ul>li:hover a>h2{
+    color: #1BA085;
+}
+.menu-hide-list>ul>li:hover a>span{
+    color: #1BA085;
+}
+
+
+
+.showbook{
+    position: relative;
+    top: 0px;
+}
+.content-showbook a img{
+    height: 80px;
+    width: 260px;
+    
+}
+.content-showbook:hover{
+    transform: translateY(-5px);
+}
+.content-showbook{
+    margin-top: 20px;
+    margin-right: 25px;
+    
+    transition: all 0.3s ;
+    
+}
+.showbook-top{
+    display: flex;
+}

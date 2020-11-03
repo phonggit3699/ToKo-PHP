@@ -1,0 +1,126 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
+@import url('https://fonts.googleapis.com/css?family=Chakra+Petch');
+
+body {
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+}
+
+.loginForm {
+    background-color: rgba(50, 121, 227, 0.2);
+    border-radius: 8px;
+    position: relative;
+    padding: 20px;
+    box-shadow: .4px 4px 12px rgba(0, 0, 0 .2);
+}
+
+.loginForm img {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    padding: 5px;
+    border-radius: 50%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+}
+
+.loginForm h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 50px;
+}
+
+.loginForm .inputForm {
+    outline: none;
+    border: none;
+    margin: 0 auto;
+    margin-top: 15px;
+    width: 80%;
+    padding: 15px 20px;
+    border-radius: 10px;
+    display: block;
+    font-size: 18px;
+}
+
+.loginForm form button, a {
+    outline: none;
+    border: none;
+    margin: 0 auto;
+    margin-top: 15px;
+    width: 95%;
+    padding: 12px 20px;
+    border-radius: 20px;
+    display: block;
+    font-size: 20px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+}
+
+.loginForm form a {
+    width: 20%;
+    margin: 12px 30px;
+    padding: 8px 15px;
+    text-decoration: none;
+    text-align: center;
+    background-color: #28A745;
+}
+
+.loginForm .saveLogin .cbsave {
+    -webkit-appearance: none;
+    height: 15px;
+    width: 15px;
+    border-radius: 3px;
+    border: 2px solid rgba(255, 255, 255, .4);
+    transition:.2s all;
+    cursor:pointer;
+    z-index:2;
+    outline: none;
+    margin-left: 10px;
+}
+
+.saveLogin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.saveLogin label{
+    transition:.2s all;
+    margin-left: 1px;
+    color: rgba(255,255,255,.5)
+}
+
+.loginForm .saveLogin .cbsave:before {
+    content: '\f00c';
+    position: absolute;
+    font-family: fontAwesome;
+    font-size: 10px;
+    color: aqua;
+    opacity: 0;
+}
+
+.loginForm .saveLogin .cbsave:checked:before {
+    opacity: 1;
+}
+
+.loginForm .saveLogin .cbsave:checked {
+    border: 2px solid aqua;
+    box-shadow: 0px 0px 5px aqua;
+}
+
+.loginForm .saveLogin .cbsave:hover {
+    transform: scale(1.4);
+}
+
+.loginForm .saveLogin .cbsave:checked ~ label{
+    color:#Fff;
+  }
