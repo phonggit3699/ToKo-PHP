@@ -19,7 +19,3 @@ $result = $db->table('book')->selectOne("id = {$pd}");
         <p>Còn lại: <?php echo $result["quantity"];?></p>
     </div>
 </div>
-
-<div>
-    bu
-</div>

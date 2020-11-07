@@ -1,5 +1,5 @@
 <?php
- header('Location: http://localhost/toko/views/user/home.php');
+ header('Location: ./views/user/home.php');
 session_start();
 print_r( $_SESSION['cart']); die();
   

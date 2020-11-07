@@ -29,7 +29,7 @@ if(isset($_POST["submit"])){
         $_POST["date"]
     );
     if ($row > 0) {
-        header('Location: http://localhost/toko/views/admin/home.php?page=detailPd&action=detailPd&id='.$IdPd);
+        header('Location: ./home.php?page=detailPd&action=detailPd&id='.$IdPd);
     }
     
 }
@@ -37,7 +37,7 @@ if(isset($_POST["submit"])){
 if($action=="deletePd"){
     $remove = $db->table('book')->deleteRow($IdPd);
     if ($remove > 0) {
-        header('Location: http://localhost/toko/views/admin/home.php?page=product');
+        header('Location:./views/admin/home.php?page=product');
         unlink($result["image"]);
     }
 }
@@ -57,9 +57,9 @@ if($action=="deletePd"){
         <p><span>Còn lại:</span> <?php echo $result["quantity"];?></p>
         <p><span>Ngày thêm:</span> <?php echo date('d-m-Y',strtotime($result['date']));?></p>
         <p><span>Mô tả:</span> <?php echo $result["description"];?></p>
-        <a href="http://localhost/toko/views/admin/home.php?page=product" class="btn btn-info">Trở lại</a>
-        <a href="http://localhost/toko/views/admin/home.php?page=detailPd&action=changePd&id=<?php echo $result["id"];?>" class="btn btn-warning">Thay đổi</a>
-        <a href="http://localhost/toko/views/admin/home.php?page=detailPd&action=deletePd&id=<?php echo $result["id"];?>" class="btn btn-danger">Xoá</a>
+        <a href="./home.php?page=product" class="btn btn-info">Trở lại</a>
+        <a href="./home.php?page=detailPd&action=changePd&id=<?php echo $result["id"];?>" class="btn btn-warning">Thay đổi</a>
+        <a href="./home.php?page=detailPd&action=deletePd&id=<?php echo $result["id"];?>" class="btn btn-danger">Xoá</a>
     </div>
     <div class="changePd" <?php if($action == "changePd"){ echo "style='display: block'";} else {echo "style='display: none'";}?>>
     <form action="" method="POST" enctype="multipart/form-data">
@@ -103,7 +103,7 @@ if($action=="deletePd"){
             <tr>
                 <td></td>
                 <td><input type="submit" value="Xong" name="submit" class="btn btn-success"></input> 
-                <a href="http://localhost/toko/views/admin/home.php?page=detailPd&action=detailPd&id=<?php echo $IdPd ?>" class="btn btn-danger">Huỷ</a></td>
+                <a href="./home.php?page=detailPd&action=detailPd&id=<?php echo $IdPd ?>" class="btn btn-danger">Huỷ</a></td>
             </tr>
         </table>
     </form>

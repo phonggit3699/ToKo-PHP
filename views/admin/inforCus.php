@@ -19,10 +19,10 @@
             ->selectOne("id = '" . $Id . "'");
         $update = $db1->table('user')->updateById($Id,  $result["user"],  $result["name"], md5("12345678"));
         if ($update > 0) {
-            header('Location: http://localhost/toko/views/admin/home.php?page=inforCus');
+            header('Location: ./home.php?page=inforCus');
         }
         if ($result["password"] == "25d55ad283aa400af464c76d713c07ad") {
-            header('Location: http://localhost/toko/views/admin/home.php?page=inforCus');
+            header('Location: ./home.php?page=inforCus');
         }
     }
     
@@ -30,7 +30,7 @@
     
         $delete = $db1->table('user')->deleteRow($Id);
         if ($delete > 0) {
-            header('Location: http://localhost/toko/views/admin/home.php?page=inforCus');
+            header('Location: ./home.php?page=inforCus');
         }
     }
     echo "<div class='clearfix'><h1 style='float: left;font-size: 20px;'><i class='fas fa-users-cog'></i> Tài khoản User: </h1></div>";
@@ -52,16 +52,16 @@
         echo "<td>".$row->password."</td>";
         echo "<td>".$row->phone."</td>";
         echo "<td>".$row->address."</td>";
-        echo "<td style='text-align: center;'><a href='http://localhost/toko/views/admin/home.php?page=changeUs&id=".$row->id."'"."><i class='fas fa-wrench'></i> Change</a></td>";
+        echo "<td style='text-align: center;'><a href='./home.php?page=changeUs&id=".$row->id."'"."><i class='fas fa-wrench'></i> Change</a></td>";
         echo "<td style='text-align: center;'>";
         if ($_SESSION["adminId"]=="admin"){
-            echo "<a href='http://localhost/toko/views/admin/home.php?page=inforCus&action=resetUs&id=".$row->id."'"."><i class='fas fa-redo-alt'></i> Reset</a>";
+            echo "<a href='./home.php?page=inforCus&action=resetUs&id=".$row->id."'"."><i class='fas fa-redo-alt'></i> Reset</a>";
             
         }  
         echo "</td>";
         echo "<td style='text-align: center;'>";
         if ($_SESSION["adminId"]=="admin"){
-            echo "<a href='http://localhost/toko/views/admin/home.php?page=inforCus&action=deleteUs&id=".$row->id."'"."><i class='fas fa-trash-alt'></i></a>";
+            echo "<a href='./home.php?page=inforCus&action=deleteUs&id=".$row->id."'"."><i class='fas fa-trash-alt'></i></a>";
             
         }  
         echo "</td>";

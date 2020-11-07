@@ -20,7 +20,7 @@ $results = $db->table('book')->select(10,$start);
         foreach ($results as $row) {
             echo "
             <div class='col-sm4 formProd'>
-            <a style='text-decoration: none;' href='http://localhost/toko/views/admin/home.php?page=detailPd&action=detailPd&id={$row->id}'>
+            <a style='text-decoration: none;' href='./home.php?page=detailPd&action=detailPd&id={$row->id}'>
                 <div class='product'>
                     <img src='{$row->image}' alt='Ảnh'>
                         <div class='detail'>
@@ -35,19 +35,19 @@ $results = $db->table('book')->select(10,$start);
         ?>
     </div>
     <div class="pagination">
-        <a href="http://localhost/toko/views/admin/home.php?page=product&p=<?php $pre = ($page - 1); if($pre >= 1){echo $pre;}else {echo  $pre = 1;} ?>" 
+        <a href="./views/admin/home.php?page=product&p=<?php $pre = ($page - 1); if($pre >= 1){echo $pre;}else {echo  $pre = 1;} ?>" 
         class='pageNext arrow'>&#8249;</a>
         <?php
         $total = $total = $db->table('book')->count();
         $maxpage = ceil($total / $ppage); //Tính số trang tối đa
         for ($i = 1; $i <= $maxpage; $i++) {
             if ($i != $page) {
-                echo "<a class='pageNext' style='text-decoration: none;'  href = http://localhost/toko/views/admin/home.php?page=product&p=$i> $i </a>";
+                echo "<a class='pageNext' style='text-decoration: none;'  href = ./home.php?page=product&p=$i> $i </a>";
             } else {
                 echo "<span class='pageCurrent'>$i</span>";
             }
         }
         ?>
-         <a href="http://localhost/toko/views/admin/home.php?page=product&p=<?php $next = ($page + 1); if($next <= $maxpage){echo $next;}else {echo  $next = $maxpage;} ?>" class='pageNext arrow'>&#8250;</a>
+         <a href="./home.php?page=product&p=<?php $next = ($page + 1); if($next <= $maxpage){echo $next;}else {echo  $next = $maxpage;} ?>" class='pageNext arrow'>&#8250;</a>
     </div>
 </div>

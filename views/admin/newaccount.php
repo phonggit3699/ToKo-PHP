@@ -10,7 +10,7 @@ if(isset($_POST["user"]) && isset($_POST["name"]) && isset($_POST["password"])){
         "password" => md5($_POST["password"]) 
         ]);
     if($insert>0){
-        header('Location: http://localhost/toko/views/admin/home.php?page=info');
+        header('Location: ./home.php?page=info');
     }
     else{
         $error = "Lỗi tạo tài khoản";
@@ -42,7 +42,7 @@ if(isset($_POST["user"]) && isset($_POST["name"]) && isset($_POST["password"])){
             </tr>
             <tr>
                 <td></td>
-                <td><button type="submit" name="submit" class="btn btn-success">Xong</button>   <a href="http://localhost/toko/views/admin/home.php?page=info" class="btn btn-danger">Huỷ</a></td>
+                <td><button type="submit" name="submit" class="btn btn-success">Xong</button>   <a href="./home.php?page=info" class="btn btn-danger">Huỷ</a></td>
             </tr>
         </table>
     </form>

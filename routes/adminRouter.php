@@ -10,7 +10,7 @@ class adminRouter
         if ($this->getGET("action")=="logout"){
             unset($_SESSION["userAdID"]);
             setcookie("login","", time() - 3600);
-            header('Location: http://localhost/toko/views/admin/login.php');
+            header('Location: ./login.php');
         }
     }
 

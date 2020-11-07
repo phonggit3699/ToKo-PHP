@@ -7,7 +7,7 @@ $route = new adminRouter();
 $page="";
 
 if (empty($_SESSION["adminId"])) {
-    header('Location: http://localhost/toko/views/admin/login.php');
+    header('Location: ./login.php');
     die();
 }
 
@@ -36,6 +36,7 @@ if(isset($_GET["page"])){
     
     <link rel="stylesheet" type="text/css" href="<?php echo $href; ?>">
     <script src="https://kit.fontawesome.com/3ea1f1912c.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 
 </head>
 
@@ -43,7 +44,7 @@ if(isset($_GET["page"])){
     <header>
         <div class="header">
             <div class="logo">
-                <a href="http://localhost/toko/views/admin/home.php?action=info">
+                <a href="./views/admin/home.php?action=info">
                     <h1>TOKO <span>ADMIN</span></h1>
                 </a>
             </div>
@@ -53,7 +54,7 @@ if(isset($_GET["page"])){
                     <li><span id="clock"></span></li>
                     <li><i class="fas fa-bell"></i></li>
                     <li><i class="fas fa-envelope"></i></li>
-                    <li><a style="color: #1C1F22" href="http://localhost/toko/views/admin/home.php?action=logout"><i class="fas fa-power-off"></i></a></li>
+                    <li><a style="color: #1C1F22" href="./home.php?action=logout"><i class="fas fa-power-off"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -64,11 +65,11 @@ if(isset($_GET["page"])){
         <div class="col-sm-3 menu">
             <div class="menuLeft">
                 <ul>
-                    <li class="bgC <?php if($page == "info" || $page == "changeAd" || $page =="newaccount"){echo 'active';} ?>"><a class="hoverC <?php if($page == "info" || $page == "changeAd" || $page =="newaccount"){echo 'activeAc';} ?>" href="http://localhost/toko/views/admin/home.php?page=info"><i class="fas fa-users-cog"></i> Thông tin admin</a></li>
-                    <li class="bgC <?php if($page == "inforCus"){echo 'active';} ?>" ><a class="hoverC <?php if($page == "inforCus"){echo 'activeAc';} ?>" href="http://localhost/toko/views/admin/home.php?page=inforCus"><i class="fas fa-user-circle"></i> Thông tin khách hàng</a></li>
-                    <li class="bgC <?php if($page== "cart"){echo 'active';} ?>"><a class="hoverC <?php if($page== "cart"){echo 'activeAc';} ?>" href="http://localhost/toko/views/admin/home.php?page=cart"><i class="fas fa-cart-arrow-down"></i> Đơn hàng</a></li>
-                    <li class="bgC <?php if($page == "product" || $page == "detailPd" || $page==""){echo 'active';} ?>" ><a class="hoverC <?php if($page == "product" || $page == "detailPd" || $page==""){echo 'activeAc';} ?>" href="http://localhost/toko/views/admin/home.php?page=product"><i class="fas fa-cart-arrow-down"></i> Sản phẩm</a></li>
-                    <li class="bgC <?php if($page== "add"){echo 'active';} ?>" ><a class="hoverC <?php if($page== "add"){echo 'activeAc';} ?>" href="http://localhost/toko/views/admin/home.php?page=add"><i class="fas fa-book-medical"></i> Thêm sách mới</a></li>
+                    <li class="bgC <?php if($page == "info" || $page == "changeAd" || $page =="newaccount"){echo 'active';} ?>"><a class="hoverC <?php if($page == "info" || $page == "changeAd" || $page =="newaccount"){echo 'activeAc';} ?>" href="./home.php?page=info"><i class="fas fa-users-cog"></i> Thông tin admin</a></li>
+                    <li class="bgC <?php if($page == "inforCus"){echo 'active';} ?>" ><a class="hoverC <?php if($page == "inforCus"){echo 'activeAc';} ?>" href="./home.php?page=inforCus"><i class="fas fa-user-circle"></i> Thông tin khách hàng</a></li>
+                    <li class="bgC <?php if($page== "cart"){echo 'active';} ?>"><a class="hoverC <?php if($page== "cart"){echo 'activeAc';} ?>" href="./home.php?page=cart"><i class="fas fa-cart-arrow-down"></i> Đơn hàng</a></li>
+                    <li class="bgC <?php if($page == "product" || $page == "detailPd" || $page==""){echo 'active';} ?>" ><a class="hoverC <?php if($page == "product" || $page == "detailPd" || $page==""){echo 'activeAc';} ?>" href="./home.php?page=product"><i class="fas fa-cart-arrow-down"></i> Sản phẩm</a></li>
+                    <li class="bgC <?php if($page== "add"){echo 'active';} ?>" ><a class="hoverC <?php if($page== "add"){echo 'activeAc';} ?>" href="./home.php?page=add"><i class="fas fa-book-medical"></i> Thêm sách mới</a></li>
                 </ul>
             </div>
         </div>

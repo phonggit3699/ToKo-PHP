@@ -13,7 +13,7 @@ if (!empty($_POST["submit"])) {
     }
     $update = $db->table('user')->updateUsById($_GET["id"], $_POST["user"], $_POST["name"],$_POST["phone"],$_POST["address"], md5($_POST["password"]));
     if ($update > 0){
-        header('Location: http://localhost/toko/views/admin/home.php?page=inforCus');
+        header('Location: ./home.php?page=inforCus');
     }
 }
 
@@ -49,7 +49,7 @@ if (!empty($_POST["submit"])) {
                 <td></td>
                 <td>
                     <input type="submit" name="submit" value="Cập nhật" class="btn btn-success"></input>
-                    <a href="http://localhost/toko/views/admin/home.php?page=info" class="btn btn-danger">Huỷ</a>
+                    <a href="./home.php?page=info" class="btn btn-danger">Huỷ</a>
                 </td>
             </tr>
         </table>

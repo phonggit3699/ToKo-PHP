@@ -78,7 +78,7 @@ if ($ac == "dk"){
 <div id="header">
     <div class="header-top">
         <div class="header-top1">
-            <div class="logo"><a href="http://localhost/toko/views/user/home.php"><img src="../../public/images/logo.png"></a></div>
+            <div class="logo"><a href="./home.php"><img src="../../public/images/logo.png"></a></div>
             <div class="form0">
                 <form action="" method="get" class="form">
                     <input type="text" name="q" placeholder=" Tìm kiếm với Toko"

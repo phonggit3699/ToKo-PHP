@@ -6,7 +6,7 @@ $db = new database();
 $erorr = "";
 if (!empty($_COOKIE["login"])) {
     $_SESSION["adminId"] = $_COOKIE["login"];
-    header('Location: http://localhost/toko/views/admin/home.php');
+    header('Location: ./home.php');
 }
 
 if (isset($_POST["user"]) && isset($_POST["name"]) && isset($_POST["password"])) {
@@ -27,7 +27,7 @@ if (isset($_POST["user"]) && isset($_POST["name"]) && isset($_POST["password"]))
                 setcookie("login", "");
             }
         }
-        header('Location: http://localhost/toko/views/admin/home.php');
+        header('Location: ./home.php');
         $erorr = "";
     }
 }

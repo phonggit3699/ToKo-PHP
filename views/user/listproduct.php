@@ -15,7 +15,7 @@ $result = mysqli_query($conn, $sql);
 			<div class='p-anh'>
 				<img src=".$row['image']." alt='Ảnh'>
 				<div class='p-sp'>
-					<a href=home.php?page=detailPd&id=".$row['id'].">Chi tiết</a>
+					<a href='./home.php?page=detailPd&id=".$row['id']."'>Chi tiết</a>
 				</div>
 			</div>
 			<div class='p-book'>

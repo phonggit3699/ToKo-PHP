@@ -19,10 +19,10 @@
             ->selectOne("id = '" . $Id . "'");
         $update = $db->table('admin')->updateById($Id,  $result["user"],  $result["name"], md5("12345678"));
         if ($update > 0) {
-            header('Location: http://localhost/toko/views/admin/home.php?page=info');
+            header('Location: ./home.php?page=info');
         }
         if ($result["password"] == "25d55ad283aa400af464c76d713c07ad") {
-            header('Location: http://localhost/toko/views/admin/home.php?page=info');
+            header('Location: ./home.php?page=info');
         }
     }
     
@@ -31,7 +31,7 @@
         if($Id != $_SESSION["adminId2"]){
             $delete = $db->table('admin')->deleteRow($Id);
             if ($delete > 0) {
-                header('Location: http://localhost/toko/views/admin/home.php?page=info');
+                header('Location: ./home.php?page=info');
             }
         }
         else{
@@ -41,7 +41,7 @@
     }
 
     echo "<div class='clearfix'><h1 style='float: left;font-size: 20px;'><i class='fas fa-users-cog'></i> Tài khoản Admin: </h1> 
-                                    <a class='btn btn-warning' style='float: right' href='http://localhost/toko/views/admin/home.php?page=newaccount'>Thêm mới tài khoản</a></div>";
+                                    <a class='btn btn-warning' style='float: right' href='./views/admin/home.php?page=newaccount'>Thêm mới tài khoản</a></div>";
     echo "<table class='table table-striped mt-2'>";
     echo "<tr>";
     echo "<th>User</th>";
@@ -56,21 +56,19 @@
         echo "<td>".$row->user."</td>";
         echo "<td>".$row->name."</td>";
         echo "<td>".$row->password."</td>";
-        echo "<td style='text-align: center;'><a href='http://localhost/toko/views/admin/home.php?page=changeAd&id=".$row->id."'"."><i class='fas fa-wrench'></i> Change</a></td>";
+        echo "<td style='text-align: center;'><a href='./home.php?page=changeAd&id=".$row->id."'"."><i class='fas fa-wrench'></i> Change</a></td>";
         echo "<td style='text-align: center;'>";
         if ($_SESSION["adminId"]=="admin"){
-            echo "<a href='http://localhost/toko/views/admin/home.php?page=info&action=reset&id=".$row->id."'"."><i class='fas fa-redo-alt'></i> Reset</a>";
+            echo "<a href='./home.php?page=info&action=reset&id=".$row->id."'"."><i class='fas fa-redo-alt'></i> Reset</a>";
             
         }  
         echo "</td>";
         echo "<td style='text-align: center;'>";
         if ($_SESSION["adminId"]=="admin"){
-            echo "<a href='http://localhost/toko/views/admin/home.php?page=info&action=delete&id=".$row->id."'"."><i class='fas fa-trash-alt'></i></a>";
+            echo "<a href='./home.php?page=info&action=delete&id=".$row->id."'"."><i class='fas fa-trash-alt'></i></a>";
             
         }  
         echo "</td>";
         echo "</tr>";
     };
     echo "</table>";
-
-?>

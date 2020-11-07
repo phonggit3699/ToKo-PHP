@@ -28,6 +28,7 @@ if (isset($_GET["page"])) {
     <link rel="stylesheet" type="text/css" href="../../public/css/styleUsPdD.css">
     <link rel="stylesheet" type="text/css" href="../../public/css/styleUsHeader.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>

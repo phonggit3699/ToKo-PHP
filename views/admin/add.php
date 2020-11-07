@@ -71,7 +71,7 @@ if (isset($_POST["submit"])  && isset($_FILES["file"]) && !empty($_FILES["file"]
     }
 
     if ($row > 0) {
-        header('Location: http://localhost/toko/views/admin/home.php?page=product');
+        header('Location: ./home.php?page=product');
     }
     else{
         unlink($target_file);
